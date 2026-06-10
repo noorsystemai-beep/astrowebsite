@@ -52,8 +52,8 @@ export function CartDrawer() {
                 <span>Total</span>
                 <span className="text-gradient-gold">₹{total}</span>
               </div>
-              <Button variant="gold" size="lg" className="w-full">
-                Checkout
+              <Button variant="gold" size="lg" className="w-full" asChild onClick={() => setOpen(false)}>
+                <Link to="/checkout">Checkout</Link>
               </Button>
             </SheetFooter>
           </>

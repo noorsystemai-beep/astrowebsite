@@ -16,6 +16,7 @@ interface CartCtx {
   toggleWishlist: (slug: string) => void;
   count: number;
   total: number;
+  clear: () => void;
 }
 
 const Ctx = createContext<CartCtx | null>(null);
@@ -38,12 +39,13 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setItems((prev) => prev.map((i) => (i.slug === slug ? { ...i, qty: Math.max(1, qty) } : i)));
   const toggleWishlist = (slug: string) =>
     setWishlist((prev) => (prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug]));
+  const clear = () => setItems([]);
 
   const count = items.reduce((s, i) => s + i.qty, 0);
   const total = items.reduce((s, i) => s + i.qty * i.price, 0);
 
   return (
-    <Ctx.Provider value={{ items, wishlist, open, setOpen, add, remove, setQty, toggleWishlist, count, total }}>
+    <Ctx.Provider value={{ items, wishlist, open, setOpen, add, remove, setQty, toggleWishlist, count, total, clear }}>
       {children}
     </Ctx.Provider>
   );

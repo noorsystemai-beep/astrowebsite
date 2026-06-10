@@ -13,6 +13,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ShopRouteImport } from './routes/shop'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CheckoutRouteImport } from './routes/checkout'
 import { Route as BookingRouteImport } from './routes/booking'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AstrologersRouteImport } from './routes/astrologers'
@@ -36,6 +37,11 @@ const ServicesRoute = ServicesRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CheckoutRoute = CheckoutRouteImport.update({
+  id: '/checkout',
+  path: '/checkout',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BookingRoute = BookingRouteImport.update({
@@ -64,6 +70,7 @@ export interface FileRoutesByFullPath {
   '/astrologers': typeof AstrologersRoute
   '/blog': typeof BlogRoute
   '/booking': typeof BookingRoute
+  '/checkout': typeof CheckoutRoute
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
   '/shop': typeof ShopRoute
@@ -74,6 +81,7 @@ export interface FileRoutesByTo {
   '/astrologers': typeof AstrologersRoute
   '/blog': typeof BlogRoute
   '/booking': typeof BookingRoute
+  '/checkout': typeof CheckoutRoute
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
   '/shop': typeof ShopRoute
@@ -85,6 +93,7 @@ export interface FileRoutesById {
   '/astrologers': typeof AstrologersRoute
   '/blog': typeof BlogRoute
   '/booking': typeof BookingRoute
+  '/checkout': typeof CheckoutRoute
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
   '/shop': typeof ShopRoute
@@ -97,6 +106,7 @@ export interface FileRouteTypes {
     | '/astrologers'
     | '/blog'
     | '/booking'
+    | '/checkout'
     | '/contact'
     | '/services'
     | '/shop'
@@ -107,6 +117,7 @@ export interface FileRouteTypes {
     | '/astrologers'
     | '/blog'
     | '/booking'
+    | '/checkout'
     | '/contact'
     | '/services'
     | '/shop'
@@ -117,6 +128,7 @@ export interface FileRouteTypes {
     | '/astrologers'
     | '/blog'
     | '/booking'
+    | '/checkout'
     | '/contact'
     | '/services'
     | '/shop'
@@ -128,6 +140,7 @@ export interface RootRouteChildren {
   AstrologersRoute: typeof AstrologersRoute
   BlogRoute: typeof BlogRoute
   BookingRoute: typeof BookingRoute
+  CheckoutRoute: typeof CheckoutRoute
   ContactRoute: typeof ContactRoute
   ServicesRoute: typeof ServicesRoute
   ShopRoute: typeof ShopRoute
@@ -162,6 +175,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/checkout': {
+      id: '/checkout'
+      path: '/checkout'
+      fullPath: '/checkout'
+      preLoaderRoute: typeof CheckoutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/booking': {
@@ -200,6 +220,7 @@ const rootRouteChildren: RootRouteChildren = {
   AstrologersRoute: AstrologersRoute,
   BlogRoute: BlogRoute,
   BookingRoute: BookingRoute,
+  CheckoutRoute: CheckoutRoute,
   ContactRoute: ContactRoute,
   ServicesRoute: ServicesRoute,
   ShopRoute: ShopRoute,
