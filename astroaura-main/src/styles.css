@@ -1,0 +1,182 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Jost", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Dark cosmic is the default look */
+  --background: oklch(0.16 0.045 285);
+  --foreground: oklch(0.95 0.015 290);
+  --card: oklch(0.21 0.05 285);
+  --card-foreground: oklch(0.95 0.015 290);
+  --popover: oklch(0.19 0.05 285);
+  --popover-foreground: oklch(0.95 0.015 290);
+  --primary: oklch(0.62 0.2 300);
+  --primary-foreground: oklch(0.98 0.01 300);
+  --secondary: oklch(0.3 0.07 280);
+  --secondary-foreground: oklch(0.95 0.015 290);
+  --muted: oklch(0.27 0.05 285);
+  --muted-foreground: oklch(0.72 0.04 290);
+  --accent: oklch(0.45 0.16 270);
+  --accent-foreground: oklch(0.98 0.01 290);
+  --gold: oklch(0.82 0.14 85);
+  --gold-foreground: oklch(0.2 0.05 285);
+  --destructive: oklch(0.62 0.22 25);
+  --destructive-foreground: oklch(0.98 0.01 290);
+  --border: oklch(0.35 0.06 285);
+  --input: oklch(0.3 0.05 285);
+  --ring: oklch(0.62 0.2 300);
+
+  --sidebar: oklch(0.19 0.05 285);
+  --sidebar-foreground: oklch(0.95 0.015 290);
+  --sidebar-primary: oklch(0.62 0.2 300);
+  --sidebar-primary-foreground: oklch(0.98 0.01 300);
+  --sidebar-accent: oklch(0.3 0.07 280);
+  --sidebar-accent-foreground: oklch(0.95 0.015 290);
+  --sidebar-border: oklch(0.35 0.06 285);
+  --sidebar-ring: oklch(0.62 0.2 300);
+
+  --gradient-cosmic: linear-gradient(135deg, oklch(0.2 0.08 290), oklch(0.25 0.1 260) 50%, oklch(0.18 0.06 300));
+  --gradient-gold: linear-gradient(135deg, oklch(0.88 0.13 90), oklch(0.74 0.15 70));
+  --gradient-aura: radial-gradient(circle at 50% 0%, oklch(0.55 0.22 300 / 0.4), transparent 60%);
+  --shadow-glow: 0 0 40px -8px oklch(0.62 0.2 300 / 0.5);
+  --shadow-gold: 0 0 30px -6px oklch(0.82 0.14 85 / 0.5);
+}
+
+.light {
+  --background: oklch(0.97 0.01 290);
+  --foreground: oklch(0.2 0.05 285);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.05 285);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.05 285);
+  --primary: oklch(0.52 0.2 300);
+  --primary-foreground: oklch(0.99 0.01 300);
+  --secondary: oklch(0.92 0.03 290);
+  --secondary-foreground: oklch(0.25 0.05 285);
+  --muted: oklch(0.93 0.02 290);
+  --muted-foreground: oklch(0.48 0.04 290);
+  --accent: oklch(0.55 0.16 270);
+  --accent-foreground: oklch(0.99 0.01 290);
+  --gold: oklch(0.7 0.14 80);
+  --gold-foreground: oklch(0.99 0.01 290);
+  --destructive: oklch(0.58 0.22 25);
+  --destructive-foreground: oklch(0.99 0.01 290);
+  --border: oklch(0.88 0.02 290);
+  --input: oklch(0.9 0.02 290);
+  --ring: oklch(0.52 0.2 300);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-display);
+  }
+}
+
+@utility text-gradient-gold {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility text-gradient-cosmic {
+  background: linear-gradient(135deg, oklch(0.8 0.16 320), oklch(0.7 0.18 280));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-cosmic {
+  background-image: var(--gradient-cosmic);
+}
+
+@utility glow {
+  box-shadow: var(--shadow-glow);
+}
+
+@utility glow-gold {
+  box-shadow: var(--shadow-gold);
+}
+
+@utility glass {
+  background-color: color-mix(in oklab, var(--card) 65%, transparent);
+  backdrop-filter: blur(14px);
+  border: 1px solid color-mix(in oklab, var(--border) 60%, transparent);
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+.animate-twinkle { animation: twinkle 3s ease-in-out infinite; }
+.animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+.animate-spin-slow { animation: spin-slow 60s linear infinite; }
