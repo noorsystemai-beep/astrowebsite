@@ -1,0 +1,5 @@
+{
+  "installCommand": "cd astroaura-main && npm install",
+  "buildCommand": "cd astroaura-main && npm run build && mkdir -p ../.vercel && rm -rf ../.vercel/output && mv .vercel/output ../.vercel/output",
+  "outputDirectory": ".vercel/output"
+}
