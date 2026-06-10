@@ -14,7 +14,7 @@ export function ServiceCard({ service }: { service: Service }) {
       <p className="mt-2 flex-1 text-sm text-muted-foreground">{service.description}</p>
       <div className="mt-5 flex items-center justify-between">
         <span className="text-sm text-muted-foreground">
-          from <span className="text-gradient-gold text-lg font-bold">${service.price}</span>
+          from <span className="text-gradient-gold text-lg font-bold">₹{service.price}</span>
         </span>
         <Button variant="outlineGold" size="sm" asChild>
           <Link to="/booking">Book Now</Link>

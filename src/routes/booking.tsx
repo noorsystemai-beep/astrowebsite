@@ -79,7 +79,7 @@ function BookingPage() {
                   )}
                 >
                   <span className="text-sm font-medium">{s.title}</span>
-                  <span className="text-sm text-gold">${s.price}</span>
+                  <span className="text-sm text-gold">₹{s.price}</span>
                 </button>
               ))}
             </div>
@@ -199,7 +199,7 @@ function BookingPage() {
             </dl>
             <div className="flex items-center justify-between border-t border-border pt-4 text-lg font-semibold">
               <span>Total</span>
-              <span className="text-gradient-gold">${selectedService.price}</span>
+              <span className="text-gradient-gold">₹{selectedService.price}</span>
             </div>
             <Button type="submit" variant="gold" size="lg" className="w-full" onClick={submit}>
               <CreditCard className="h-5 w-5" /> Pay & Confirm

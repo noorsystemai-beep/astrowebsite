@@ -48,14 +48,14 @@ export interface Service {
 }
 
 export const SERVICES: Service[] = [
-  { slug: "kundli", title: "Kundli Reading", icon: "ScrollText", description: "A complete birth-chart analysis revealing your life path, strengths and karmic lessons.", price: 49 },
-  { slug: "tarot", title: "Tarot Reading", icon: "Sparkles", description: "Ancient card wisdom to illuminate your present questions and future possibilities.", price: 39 },
-  { slug: "career", title: "Career Guidance", icon: "Briefcase", description: "Align your professional journey with planetary timing for growth and success.", price: 59 },
-  { slug: "love", title: "Love & Relationship", icon: "Heart", description: "Understand your emotional patterns and attract harmonious, lasting connections.", price: 55 },
-  { slug: "marriage", title: "Marriage Compatibility", icon: "HeartHandshake", description: "Detailed Kundli matching and guna milan for a blessed, balanced union.", price: 69 },
-  { slug: "numerology", title: "Numerology", icon: "Hash", description: "Decode the vibration of your name and birth numbers to unlock your potential.", price: 35 },
-  { slug: "palm", title: "Palm Reading", icon: "Hand", description: "Read the sacred lines of your palm to reveal destiny written in your hands.", price: 29 },
-  { slug: "vastu", title: "Vastu Consultation", icon: "Home", description: "Harmonise your home and workspace energies for prosperity and peace.", price: 79 },
+  { slug: "kundli", title: "Kundli Reading", icon: "ScrollText", description: "A complete birth-chart analysis revealing your life path, strengths and karmic lessons.", price: 1499 },
+  { slug: "tarot", title: "Tarot Reading", icon: "Sparkles", description: "Ancient card wisdom to illuminate your present questions and future possibilities.", price: 1199 },
+  { slug: "career", title: "Career Guidance", icon: "Briefcase", description: "Align your professional journey with planetary timing for growth and success.", price: 1799 },
+  { slug: "love", title: "Love & Relationship", icon: "Heart", description: "Understand your emotional patterns and attract harmonious, lasting connections.", price: 1699 },
+  { slug: "marriage", title: "Marriage Compatibility", icon: "HeartHandshake", description: "Detailed Kundli matching and guna milan for a blessed, balanced union.", price: 2199 },
+  { slug: "numerology", title: "Numerology", icon: "Hash", description: "Decode the vibration of your name and birth numbers to unlock your potential.", price: 1099 },
+  { slug: "palm", title: "Palm Reading", icon: "Hand", description: "Read the sacred lines of your palm to reveal destiny written in your hands.", price: 899 },
+  { slug: "vastu", title: "Vastu Consultation", icon: "Home", description: "Harmonise your home and workspace energies for prosperity and peace.", price: 2499 },
 ];
 
 export interface Astrologer {
@@ -69,10 +69,10 @@ export interface Astrologer {
 }
 
 export const ASTROLOGERS: Astrologer[] = [
-  { name: "Pandit Arjun Sharma", image: astro1, experience: 22, specialization: "Vedic Astrology & Kundli", languages: ["Hindi", "English", "Sanskrit"], rating: 4.9, price: 49 },
-  { name: "Maya Celeste", image: astro2, experience: 14, specialization: "Tarot & Intuitive Reading", languages: ["English", "French"], rating: 4.8, price: 55 },
-  { name: "Acharya David Rune", image: astro3, experience: 18, specialization: "Numerology & Remedies", languages: ["English", "German"], rating: 4.7, price: 45 },
-  { name: "Sana Kapoor", image: astro4, experience: 9, specialization: "Love & Relationship Astrology", languages: ["Hindi", "English", "Punjabi"], rating: 4.9, price: 52 },
+  { name: "Pandit Arjun Sharma", image: astro1, experience: 22, specialization: "Vedic Astrology & Kundli", languages: ["Hindi", "English", "Sanskrit"], rating: 4.9, price: 1499 },
+  { name: "Maya Celeste", image: astro2, experience: 14, specialization: "Tarot & Intuitive Reading", languages: ["English", "French"], rating: 4.8, price: 1699 },
+  { name: "Acharya David Rune", image: astro3, experience: 18, specialization: "Numerology & Remedies", languages: ["English", "German"], rating: 4.7, price: 1399 },
+  { name: "Sana Kapoor", image: astro4, experience: 9, specialization: "Love & Relationship Astrology", languages: ["Hindi", "English", "Punjabi"], rating: 4.9, price: 1599 },
 ];
 
 export interface Product {
@@ -87,12 +87,12 @@ export interface Product {
 }
 
 export const PRODUCTS: Product[] = [
-  { slug: "rudraksha-mala", name: "Rudraksha Mala", image: rudraksha, price: 39, oldPrice: 59, rating: 4.8, reviews: 214, tag: "Bestseller" },
-  { slug: "blue-sapphire", name: "Blue Sapphire (Neelam)", image: sapphire, price: 299, oldPrice: 399, rating: 4.9, reviews: 87, tag: "Certified" },
-  { slug: "evil-eye-bracelet", name: "Evil Eye Bracelet", image: evileye, price: 24, oldPrice: 34, rating: 4.7, reviews: 412 },
-  { slug: "wealth-yantra", name: "Wealth Yantra", image: yantra, price: 45, rating: 4.8, reviews: 156, tag: "Energised" },
-  { slug: "healing-crystals", name: "Healing Crystal Set", image: crystals, price: 64, oldPrice: 89, rating: 4.9, reviews: 178 },
-  { slug: "zodiac-pendant", name: "Zodiac Gold Pendant", image: pendant, price: 79, rating: 4.6, reviews: 93, tag: "New" },
+  { slug: "rudraksha-mala", name: "Rudraksha Mala", image: rudraksha, price: 1199, oldPrice: 1799, rating: 4.8, reviews: 214, tag: "Bestseller" },
+  { slug: "blue-sapphire", name: "Blue Sapphire (Neelam)", image: sapphire, price: 8999, oldPrice: 11999, rating: 4.9, reviews: 87, tag: "Certified" },
+  { slug: "evil-eye-bracelet", name: "Evil Eye Bracelet", image: evileye, price: 749, oldPrice: 1049, rating: 4.7, reviews: 412 },
+  { slug: "wealth-yantra", name: "Wealth Yantra", image: yantra, price: 1399, rating: 4.8, reviews: 156, tag: "Energised" },
+  { slug: "healing-crystals", name: "Healing Crystal Set", image: crystals, price: 1999, oldPrice: 2799, rating: 4.9, reviews: 178 },
+  { slug: "zodiac-pendant", name: "Zodiac Gold Pendant", image: pendant, price: 2499, rating: 4.6, reviews: 93, tag: "New" },
 ];
 
 export interface Testimonial {

@@ -33,7 +33,7 @@ export function AstrologerCard({ astrologer }: { astrologer: Astrologer }) {
         <RatingStars rating={astrologer.rating} />
         <div className="flex items-center justify-between pt-1">
           <span className="text-sm text-muted-foreground">
-            <span className="text-gradient-gold text-lg font-bold">${astrologer.price}</span>/session
+            <span className="text-gradient-gold text-lg font-bold">₹{astrologer.price}</span>/session
           </span>
         </div>
         <div className="flex gap-2 pt-1">

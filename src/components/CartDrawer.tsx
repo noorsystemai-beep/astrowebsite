@@ -30,7 +30,7 @@ export function CartDrawer() {
                   <img src={item.image} alt={item.name} className="h-16 w-16 rounded-md object-cover" />
                   <div className="flex flex-1 flex-col">
                     <span className="text-sm font-medium">{item.name}</span>
-                    <span className="text-sm text-gold">${item.price}</span>
+                    <span className="text-sm text-gold">₹{item.price}</span>
                     <div className="mt-auto flex items-center gap-2">
                       <Button variant="outline" size="icon" className="h-7 w-7" onClick={() => setQty(item.slug, item.qty - 1)}>
                         <Minus className="h-3 w-3" />
@@ -50,7 +50,7 @@ export function CartDrawer() {
             <SheetFooter className="border-t border-border pt-4">
               <div className="mb-3 flex items-center justify-between text-lg font-semibold">
                 <span>Total</span>
-                <span className="text-gradient-gold">${total}</span>
+                <span className="text-gradient-gold">₹{total}</span>
               </div>
               <Button variant="gold" size="lg" className="w-full">
                 Checkout

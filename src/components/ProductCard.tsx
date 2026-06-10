@@ -39,9 +39,9 @@ export function ProductCard({ product }: { product: Product }) {
           <span className="text-xs text-muted-foreground">({product.reviews})</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-gradient-gold text-xl font-bold">${product.price}</span>
+          <span className="text-gradient-gold text-xl font-bold">₹{product.price}</span>
           {product.oldPrice && (
-            <span className="text-sm text-muted-foreground line-through">${product.oldPrice}</span>
+            <span className="text-sm text-muted-foreground line-through">₹{product.oldPrice}</span>
           )}
         </div>
         <Button variant="gold" className="mt-2 w-full" onClick={() => add(product)}>
